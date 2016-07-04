@@ -1,17 +1,14 @@
 {
-  "name": "testbot",
+  "name": "testbot2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "testbot2.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "botkit": "^0.2.2",
-    "csvtojson": "^1.0.0",
-    "feedparser": "^1.1.4",
-    "heroku": "^0.2.0"
+    "feedparser": "^1.1.4"
   }
 }
