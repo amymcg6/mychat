@@ -183,6 +183,6 @@ function formatUptime(uptime) {
 
 controller.hears(['fact', 'hit me'], 'direct_message,direct_mention,mention', function (bot, message) {
 
- bot.reply(message, factgen.getrandomfact())
+    bot.reply(message, factgen.getrandomfact())
 
 });
