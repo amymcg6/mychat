@@ -1,11 +1,11 @@
-var fs = require('fs')
-var filename = process.argv[3]
-    fs.readFile(filename, function(e, data) {
-        if (e) return res.sendStatus(500)
-        try {
-            books = JSON.parse(data)
-        } catch (e) {
-            res.sendStatus(500)
-        }
-        res.json(books)
-    })
+//Converter Class 
+var Converter = require("csvtojson").Converter;
+var converter = new Converter({});
+ 
+//end_parsed will be emitted once parsing finished 
+converter.on("end_parsed", function (jsonArray) {
+   console.log(jsonArray); //here is your result jsonarray 
+});
+ 
+//read from file 
+require("fs").createReadStream("./randomfacts.csv").pipe(converter);
