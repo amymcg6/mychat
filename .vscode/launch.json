@@ -5,7 +5,7 @@
             "name": "Launch",
             "type": "node",
             "request": "launch",
-            "program": "${workspaceRoot}/figuring-out.js",
+            "program": "${workspaceRoot}/mychatbot.js",
             "stopOnEntry": false,
             "args": [],
             "cwd": "${workspaceRoot}",

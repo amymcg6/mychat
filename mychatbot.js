@@ -178,3 +178,26 @@ function formatUptime(uptime) {
     uptime = uptime + ' ' + unit;
     return uptime;
 }
+
+
+function csvreader () {
+
+
+controller.hears(['fact', 'hit me'],
+'direct_message,direct_mention,mention', function (bot, message) {
+
+var Converter = require("csvtojson").Converter;
+var converter = new Converter({headers:["fact"]}) ;
+ 
+converter.on("end_parsed", function (jsonArray) {
+    var index = Math.floor(Math.random() * jsonArray.length)
+   console.log(jsonArray[index]); 
+});
+ 
+require("fs").createReadStream("./randomfacts.csv").pipe(converter);
+} 
+
+ , bot.reply(message,
+ console.log(jsonArray[index]))
+
+)}
